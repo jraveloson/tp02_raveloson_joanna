@@ -1,0 +1,21 @@
+<h1>Pollution</h1>
+<form class="pollution-form">
+    <p>Titre : <input type="text" [(ngModel)]="titre" placeholder="Titre de la pollution" name="titre"></p>
+    <p>Type :
+        <select [(ngModel)]="type" name="type">
+            <option value="plastique">Plastique</option>
+            <option value="chimique">Chimique</option>
+            <option value="depot sauvage">Dépôt sauvage</option>
+            <option value="eau">Eau</option>
+            <option value="air">Air</option>
+            <option value="autre">Autre</option>
+        </select>
+    </p>
+    <p>Description : <textarea [(ngModel)]="description" placeholder="Description" name="description"></textarea></p>
+    <p>Date : <input type="date" [(ngModel)]="date" name="date"></p>
+    <p>Lieu : <input type="text" [(ngModel)]="lieu" placeholder="Lieu" name="lieu"></p>
+    <p>Latitude : <input type="number" [(ngModel)]="latitude" placeholder="Latitude" name="latitude"></p>
+    <p>Longitude : <input type="number" [(ngModel)]="longitude" placeholder="Longitude" name="longitude"></p>
+    <p>Photo : <input type="url" [(ngModel)]="photo" placeholder="URL de la photo" name="photo"></p>
+    <button type="button" (click)="onSubmit()">Déclarer</button>
+</form>

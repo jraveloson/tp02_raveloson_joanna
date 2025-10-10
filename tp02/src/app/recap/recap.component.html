@@ -1,0 +1,13 @@
+<div *ngIf="pollutionData" class="recap">
+    <h2>Récapitulatif de la pollution déclarée</h2>
+    <ul>
+        <li><strong>Titre :</strong> {{ pollutionData.titre }}</li>
+        <li><strong>Type :</strong> {{ pollutionData.type }}</li>
+        <li><strong>Description :</strong> {{ pollutionData.description }}</li>
+        <li><strong>Date :</strong> {{ pollutionData.date }}</li>
+        <li><strong>Lieu :</strong> {{ pollutionData.lieu }}</li>
+        <li><strong>Latitude :</strong> {{ pollutionData.latitude }}</li>
+        <li><strong>Longitude :</strong> {{ pollutionData.longitude }}</li>
+        <div class="photo" [style.background-image]="'url(' + pollutionData.photo + ')'"></div>
+    </ul>
+</div>

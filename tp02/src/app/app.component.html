@@ -1,0 +1,12 @@
+<!-- Affiche le formulaire si pas encore soumis -->
+<app-form *ngIf="!pollutionData" (formSubmitted)="handleFormSubmit($event)">
+</app-form>
+
+<!-- Affiche le récapitulatif si soumis -->
+<app-recap *ngIf="pollutionData" [pollutionData]="pollutionData">
+</app-recap>
+
+<!-- Bouton pour recommencer -->
+<div *ngIf="pollutionData" style="margin-top: 1rem;">
+  <button (click)="resetRecap()">Déclarer une nouvelle pollution</button>
+</div>
